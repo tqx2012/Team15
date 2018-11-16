@@ -64,7 +64,7 @@ module.exports = AFRAME.registerComponent('touch-controls', {
   onTouchStart: function (e) {
     this.direction = -1;
     if (this.data.reverseEnabled && e.touches.length === 2) {
-      this.direction = 1;
+      this.direction = 10;
     }
     e.preventDefault();
   },

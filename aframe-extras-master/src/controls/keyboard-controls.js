@@ -56,10 +56,10 @@ module.exports = AFRAME.registerComponent('keyboard-controls', {
 
     this.dVelocity.set(0, 0, 0);
     if (data.enabled) {
-      if (keys.KeyW || keys.ArrowUp)    { this.dVelocity.z -= 1; }
-      if (keys.KeyA || keys.ArrowLeft)  { this.dVelocity.x -= 1; }
-      if (keys.KeyS || keys.ArrowDown)  { this.dVelocity.z += 1; }
-      if (keys.KeyD || keys.ArrowRight) { this.dVelocity.x += 1; }
+      if (keys.KeyW || keys.ArrowUp)    { this.dVelocity.z -= 10; }
+      if (keys.KeyA || keys.ArrowLeft)  { this.dVelocity.x -= 10; }
+      if (keys.KeyS || keys.ArrowDown)  { this.dVelocity.z += 10; }
+      if (keys.KeyD || keys.ArrowRight) { this.dVelocity.x += 10; }
     }
 
     return this.dVelocity.clone();

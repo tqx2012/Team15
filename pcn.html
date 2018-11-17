@@ -10,7 +10,7 @@
 	<script src="https://rawgit.com/donmccurdy/aframe-extras/v2.1.1/dist/aframe-extras.loaders.min.js"></script>
 </head>
 
-<a-scene inspector="url:https://aframe.io/releases/0.3.0/aframe-inspector.min.js" background="color:#ECECEC" class="fullscreen"
+<a-scene debug inspector="url:https://aframe.io/releases/0.3.0/aframe-inspector.min.js" background="color:#ECECEC" class="fullscreen"
  keyboard-shortcuts="" screenshot="" vr-mode-ui="">
 	<a-assets>
 		<a-assets-item id="tree1" src="models\tree1.ply"></a-assets-item>
@@ -26,9 +26,14 @@
 		<a-assets-item id="scene_park4" src="models\scene_park4.ply"></a-assets-item>
 
 		<a-assets-item id="chr_lady1" src="models\chr_lady1.ply"></a-assets-item>
+		<a-assets-item id="chr_lady2" src="models\chr_lady2.ply"></a-assets-item>
+		<a-assets-item id="chr_headphones" src="models\chr_headphones.ply"></a-assets-item>
 		<a-assets-item id="chr_oldlady" src="models\chr_oldlady.ply"></a-assets-item>
 		<a-assets-item id="chr_oldman" src="models\chr_oldman.ply"></a-assets-item>
-		<a-assets-item id="chr_headphones" src="models\chr_headphones.ply"></a-assets-item>
+		<a-assets-item id="chr_suit1" src="models\chr_suit1.ply"></a-assets-item>
+		<a-assets-item id="chr_punk" src="models\chr_punk.ply"></a-assets-item>
+		<a-assets-item id="chr_ponytail1" src="models\chr_ponytail1.ply"></a-assets-item>
+		<a-assets-item id="chr_mailman" src="models\chr_mailman.ply"></a-assets-item>
 
 		<a-assets-item id="rubbish" src="models\rubbish.ply"></a-assets-item>
 		<a-assets-item id="cab1" src="models\cab1.ply"></a-assets-item>
@@ -101,9 +106,13 @@
 	<a-entity ply-model="src:#tree1" position="8 0 35" scale="0.1 0.1 0.1" rotation="-90 0 0"></a-entity>
 
 	<!-- vehicles -->
-	<a-entity ply-model="src:#cab1" position="-4.43 0 -21.06" scale="0.1 0.1 0.1" rotation="-90 0 0"></a-entity>
+	<a-entity ply-model="src:#cab1" position="-4.43 0 -21.06" scale="0.1 0.1 0.1" rotation="-90 0 0">
+		<a-animation attribute="position" from="-4.43 0 -21.06" to="-4.43 0 -40.06" dur="2000" repeat="indefinite"></a-animation>
+	</a-entity>
 	<a-entity ply-model="src:#wagon4" position="11 0 18" scale="0.1 0.1 0.1" rotation="-90 0 0"></a-entity>
-	<a-entity ply-model="src:#bus" position="-5.47 0 0.54" scale="0.1 0.1 0.1" rotation="-90 0 0"></a-entity>
+	<a-entity ply-model="src:#bus" position="-5.47 0 0.54" scale="0.1 0.1 0.1" rotation="-90 0 0">
+		<a-animation attribute="position" from="-5.47 0 0.54" to="-4.43 0 -40.06" dur="8000" repeat="indefinite"></a-animation>
+	</a-entity>
 	<a-entity ply-model="src:#car5" position="3 0 -8" scale="0.1 0.1 0.1" rotation="-90 210 0"></a-entity>
 	<a-entity ply-model="src:#busstop" position="-7.5 0 2.95" scale="0.1 0.1 0.1" rotation="-90 90 0"></a-entity>
 
@@ -116,8 +125,20 @@
 	<a-entity ply-model="src:#house3a" position="17 0 -10" scale="0.1 0.1 0.1" rotation="-90 90 0"></a-entity>
 	<a-entity ply-model="src:#coffee" position="13 0 32" scale="0.1 0.1 0.1" rotation="-90 180 0"></a-entity>
 
-	<!-- Character -->
+	<!-- Characters on right lane of PCN-->
 	<a-entity ply-model="src:#chr_headphones" position="6.5 0 10" scale="0.1 0.1 0.1" rotation="-90 180 0"></a-entity>
+	<a-entity ply-model="src:#chr_lady1" position="6.5 0 17" scale="0.1 0.1 0.1" rotation="-90 180 0"></a-entity>
+
+	<!-- Characters on left lane of PCN-->
+	<a-entity ply-model="src:#chr_oldman" position="5 0 12" scale="0.1 0.1 0.1" rotation="-90 0 0">
+		<a-animation attribute="position" from="5 0 12" to="5 0 30" dur="8000" repeat="indefinite"></a-animation>
+	</a-entity>
+	<a-entity ply-model="src:#chr_suit1" position="5 0 3" scale="0.1 0.1 0.1" rotation="-90 0 0">
+		<a-animation attribute="position" from="5 0 3" to="5 0 12" dur="4000" repeat="indefinite"></a-animation>
+	</a-entity>
+	<a-entity ply-model="src:#chr_lady2" position="5 0 -10" scale="0.1 0.1 0.1" rotation="-90 0 0">
+		<a-animation attribute="position" from="5 0 -10" to="5 0 3" dur="6000" repeat="indefinite"></a-animation>
+	</a-entity>
 
 	<!-- Decoration -->
 	<a-entity ply-model="src:#christmas" position="12.5 0 10" scale="0.1 0.1 0.1" rotation="-90 90 0"></a-entity>

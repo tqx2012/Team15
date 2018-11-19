@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Ride Safe</title>
+    <meta name="description" content="Hello, WebVR! � A-Frame">
+    <script src="https://aframe.io/releases/0.8.2/aframe.min.js"></script>
+	 <script src="https://rawgit.com/donmccurdy/aframe-extras/v2.1.1/dist/aframe-extras.loaders.min.js"></script>
+
+
+  </head>
+  
+<a-scene inspector="url:https://aframe.io/releases/0.3.0/aframe-inspector.min.js" background="color:#ECECEC" class="fullscreen" keyboard-shortcuts="" screenshot="" vr-mode-ui="">
+		  <a-assets> 
+	  <a-assets-item id="tree1" src="models\tree1.ply"></a-assets-item> 
+	  <a-assets-item id="house1a" src="models\house1a.ply"></a-assets-item> 
+	  <a-assets-item id="house2" src="models\house2.ply"></a-assets-item> 
+	  <a-assets-item id="house3a" src="models\house3a.ply"></a-assets-item> 
+	  <a-assets-item id="scene_house6" src="models\scene_house6.ply"></a-assets-item> 
+	  <a-assets-item id="playground1" src="models\playground1.ply"></a-assets-item>
+	  <a-assets-item id="playground2" src="models\playground2.ply"></a-assets-item> 
+	  <a-assets-item id="playground3" src="models\playground3.ply"></a-assets-item> 
+	  <a-assets-item id="playground4" src="models\playground4.ply"></a-assets-item> 	  
+	  <a-assets-item id="playground5" src="models\playground5.ply"></a-assets-item> 
+	  <a-assets-item id="scene_park4" src="models\scene_park4.ply"></a-assets-item> 
+	  
+	  <a-assets-item id="chr_lady1" src="models\chr_lady1.ply"></a-assets-item> 
+	  <a-assets-item id="chr_oldlady" src="models\chr_oldlady.ply"></a-assets-item> 
+	  <a-assets-item id="chr_oldman" src="models\chr_oldman.ply"></a-assets-item> 
+	  <a-assets-item id="chr_headphones" src="models\chr_headphones.ply"></a-assets-item> 
+	  
+	  <a-assets-item id="rubbish" src="models\rubbish.ply"></a-assets-item> 
+	  <a-assets-item id="cab1" src="models\cab1.ply"></a-assets-item> 
+	  <a-assets-item id="car1" src="models\car1.ply"></a-assets-item> 
+	  <a-assets-item id="truck1" src="models\truck1.ply"></a-assets-item> 
+	  <a-assets-item id="bus" src="models\bus.ply"></a-assets-item> 
+	  <a-assets-item id="busstop" src="models\busstop.ply"></a-assets-item> 
+
+	  
+	  </a-assets>
+
+	  <a-sky src="img\background.jpg" material="" geometry="" scale="" position=""></a-sky>
+      <a-plane src="img\textures\grass.jpg" repeat="15 30" position="0 0 -4" rotation="-90 0 0" width="80" height="80" shadow="" material="" geometry=""></a-plane>
+	  <a-plane src="img\textures\sgroad.jpg" repeat="2 100" position="-2 0.1 -4" rotation="-90 0 0" width="10" height="80" shadow="" material="" geometry=""></a-plane>
+	  
+	  <!-- texts-->
+	  <a-entity position="-1.25 2 11.44" geometry="primitive:plane;height:0.5;width:2" material="color:red" text="width:2;value:Be careful of potholes or rubbish that can cause accidents.;zOffset:0"> </a-entity>
+	  <a-entity position="-4.47 3 0.50" geometry="primitive:plane;height:0.5;width:2" material="color:red" text="width:2;value:Big vehicles like bus are unaware of cyclists in their blindspots. ;zOffset:0"> </a-entity>
+	  <a-entity position="1 2 -8.33" geometry="primitive:plane;height:0.5;width:2" material="color:red" text="width:2;value:Pedestrains on the road that are distracted with headphones,phones etc will not see you.;zOffset:0"> </a-entity>
+	  <a-entity position="-4,43 2 -21" geometry="primitive:plane;height:0.5;width:2" material="color:red" text="width:2;value:Be careful of aggressive drivers that do not give way or drive very closely to bicycles.;zOffset:0"> </a-entity>
+	  
+	  <!-- houses-->
+	  <a-entity ply-model="src: #house1a" position="-15 0 -20" scale="0.01 0.1 0.1" rotation="-90 90 0"></a-entity>
+	  <a-entity ply-model="src: #house1a" position="-15 0 -10" scale="0.1 0.1 0.1" rotation="-90 90 0"></a-entity>
+	  <a-entity ply-model="src: #house1a" position="-15 0 -0" scale="0.1 0.1 0.1" rotation="-90 90 0"></a-entity>
+	  <a-entity ply-model="src: #house1a" position="-15 0 10" scale="0.1 0.1 0.1" rotation="-90 90 0"></a-entity>
+
+	  
+	  <a-entity ply-model="src:#house3a" position="25.02 0 14.76" scale="0.1 0.1 0.1" rotation="-90 90 0"></a-entity>
+	  <a-entity ply-model="src:#house3a" position="25.02 0 -12.24" scale="0.1 0.1 0.1" rotation="-90 90 0"></a-entity>
+	  
+	  <!-- left trees -->
+	  <a-entity ply-model="src:#tree1" position="-8.46 0 -40" scale="0.1 0.1 0.1" rotation="-90 0 0"></a-entity>
+	  <a-entity ply-model="src:#tree1" position="-8.46 0 -35" scale="0.1 0.1 0.1" rotation="-90 0 0"></a-entity>
+	  <a-entity ply-model="src:#tree1" position="-8.46 0 -30" scale="0.1 0.1 0.1" rotation="-90 0 0"></a-entity>
+	  <a-entity ply-model="src:#tree1" position="-8.46 0 -25" scale="0.1 0.1 0.1" rotation="-90 0 0"></a-entity>
+	  <a-entity ply-model="src:#tree1" position="-8.46 0 -20" scale="0.1 0.1 0.1" rotation="-90 0 0"></a-entity>
+	  <a-entity ply-model="src:#tree1" position="-8.46 0 -15" scale="0.1 0.1 0.1" rotation="-90 0 0"></a-entity>
+	  <a-entity ply-model="src:#tree1" position="-8.46 0 -10" scale="0.1 0.1 0.1" rotation="-90 0 0"></a-entity>
+	  <a-entity ply-model="src:#tree1" position="-8.46 0 -5" scale="0.1 0.1 0.1" rotation="-90 0 0"></a-entity>
+	  <a-entity ply-model="src:#tree1" position="-8.46 0 0" scale="0.1 0.1 0.1" rotation="-90 0 0"></a-entity>
+	  <a-entity ply-model="src:#tree1" position="-8.46 0 5" scale="0.1 0.1 0.1" rotation="-90 0 0"></a-entity>
+	  <a-entity ply-model="src:#tree1" position="-8.46 0 10" scale="0.1 0.1 0.1" rotation="-90 0 0"></a-entity>
+	  <a-entity ply-model="src:#tree1" position="-8.46 0 15" scale="0.1 0.1 0.1" rotation="-90 0 0"></a-entity>
+	  <a-entity ply-model="src:#tree1" position="-8.46 0 20" scale="0.1 0.1 0.1" rotation="-90 0 0"></a-entity>
+	  <a-entity ply-model="src:#tree1" position="-8.46 0 25" scale="0.1 0.1 0.1" rotation="-90 0 0"></a-entity>
+	  
+	  <!-- right trees -->
+	  <a-entity ply-model="src:#tree1" position="5.10 0 -40" scale="0.1 0.1 0.1" rotation="-90 0 0"></a-entity>
+	  <a-entity ply-model="src:#tree1" position="5.10 0 -35" scale="0.1 0.1 0.1" rotation="-90 0 0"></a-entity>
+	  <a-entity ply-model="src:#tree1" position="5.10 0 -30" scale="0.1 0.1 0.1" rotation="-90 0 0"></a-entity>
+	  <a-entity ply-model="src:#tree1" position="5.10 0 -25" scale="0.1 0.1 0.1" rotation="-90 0 0"></a-entity>
+	  <a-entity ply-model="src:#tree1" position="5.10 0 -20" scale="0.1 0.1 0.1" rotation="-90 0 0"></a-entity>
+	  <a-entity ply-model="src:#tree1" position="5.10 0 -15" scale="0.1 0.1 0.1" rotation="-90 0 0"></a-entity>
+	  <a-entity ply-model="src:#tree1" position="5.10 0 -10" scale="0.1 0.1 0.1" rotation="-90 0 0"></a-entity>
+	  <a-entity ply-model="src:#tree1" position="5.10 0 -5" scale="0.1 0.1 0.1" rotation="-90 0 0"></a-entity>
+	  <a-entity ply-model="src:#tree1" position="5.10 0 0" scale="0.1 0.1 0.1" rotation="-90 0 0"></a-entity>
+	  <a-entity ply-model="src:#tree1" position="5.10 0 5" scale="0.1 0.1 0.1" rotation="-90 0 0"></a-entity>
+	  <a-entity ply-model="src:#tree1" position="5.10 0 10" scale="0.1 0.1 0.1" rotation="-90 0 0"></a-entity>
+	  <a-entity ply-model="src:#tree1" position="5.10 0 15" scale="0.1 0.1 0.1" rotation="-90 0 0"></a-entity>
+	  <a-entity ply-model="src:#tree1" position="5.10 0 20" scale="0.1 0.1 0.1" rotation="-90 0 0"></a-entity>
+	  <a-entity ply-model="src:#tree1" position="5.10 0 25" scale="0.1 0.1 0.1" rotation="-90 0 0"></a-entity>
+	  
+	  <!-- objects and humans -->
+	  <a-entity ply-model="src: #playground1" position="5 0 -2" scale="0.1 0.1 0.1" rotation="-90 0 0"></a-entity>
+	  <a-entity ply-model="src:#playground2" position="13.36 0 -0.17" scale="0.1 0.1 0.1" rotation="-90 90 0"></a-entity>
+	  <a-entity ply-model="src:#playground3" position="13.88 0 3.56" scale="0.1 0.1 0.1" rotation="-90 0 0"></a-entity>
+	  <a-entity ply-model="src:#playground4" position="13.82 0 -3.88" scale="0.1 0.1 0.1" rotation="-90 0 0"></a-entity>
+	  <a-entity ply-model="src:#playground5" position="13.83 0 6.87" scale="0.1 0.1 0.1" rotation="-90 0 0"></a-entity>
+	  <a-entity ply-model="src:#scene_park4" position="24.55 0 -30.15" scale="0.1 0.1 0.1" rotation="-90 0 0"></a-entity>
+	  <a-entity ply-model="src:#chr_lady1" position="-8.67 0 6.53" scale="0.1 0.1 0.1" rotation="-90 90 0"></a-entity>
+	  <a-entity ply-model="src:#chr_oldlady" position="5 0 -3.75" scale="0.1 0.1 0.1" rotation="-90 270 0"></a-entity>
+	  <a-entity ply-model="src:#chr_oldman" position="5 0 -2.44" scale="0.1 0.1 0.1" rotation="-90 270 0"></a-entity>
+	  <a-entity ply-model="src:#chr_headphones" position="0.97 0 -8.33" scale="0.1 0.1 0.1" rotation="-90 270 0"></a-entity>
+	  <a-entity ply-model="src:#rubbish" position="-1.85 0 11.55" scale="0.1 0.1 0.1" rotation="-90 0 0"></a-entity>
+	  
+	  <!-- vehicles -->
+	  <a-entity ply-model="src:#cab1" position="-4.43 0 -21.06" scale="0.1 0.1 0.1" rotation="-90 0 0"></a-entity>
+	  <a-entity ply-model="src:#bus" position="-5.47 0 0.54" scale="0.1 0.1 0.1" rotation="-90 0 0"></a-entity>
+	  <a-entity ply-model="src:#busstop" position="-6.99 0 2.95" scale="0.1 0.1 0.1" rotation="-90 90 0"></a-entity>
+
+</a-scene>
+  
+
+</html
+
+	<!�positioning is  left right, up down, forward backward�>

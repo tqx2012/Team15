@@ -108,6 +108,17 @@
                                     <form id="updateForm">
                                             <div class="input-group form-group">
                                                     <div class="input-group-prepend">
+                                                            <span class="input-group-text"><i class="fas fa-list-ol"></i></span>
+                                                    </div>
+                                                    <select class="form-control" name='level'  id="level" value='' required>
+                                                        <option selected value="">-- Select Level --</option>
+                                                        <option value="1">Level 1</option>
+                                                        <option value="2">Level 2</option>
+                                                        <option value="3">Level 3</option>
+                                                    </select>
+                                            </div>
+                                            <div class="input-group form-group">
+                                                    <div class="input-group-prepend">
                                                             <span class="input-group-text"><i class="fas fa-adjust"></i></span>
                                                     </div>
                                                     <input type="checkbox" data-toggle="toggle" checked data-onstyle="info" data-offstyle="primary" data-off="Night" data-on="Day">
@@ -126,7 +137,7 @@
                                                     <input type="text" class="form-control" placeholder="No. of Pedestrians">
                                             </div>
                                             <div class="form-group">
-                                                    <input type="submit" value="Update" class="btn login_btn">
+                                                    <input type="submit" value="Update" class="btn float-right login_btn">
                                             </div>
                                     </form>
                             </div>
@@ -145,11 +156,11 @@
             var number = document.getElementById('number').value;
             if (number === '5') {
                 // Store
-                sessionStorage.setItem("link", "test.html");
+                localStorage.setItem("link", "test.html");
                 //alert(sessionStorage.getItem("link"));
             } else if (number === '10') {
                 // Store
-                sessionStorage.setItem("link", "test2.html");
+                localStorage.setItem("link", "test2.html");
                 //alert(sessionStorage.getItem("link"));
             }
             document.location.href = "index.html";

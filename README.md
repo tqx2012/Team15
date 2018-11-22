@@ -92,25 +92,42 @@ let generateProject = project => {
 
 - Clone this repo to your local machine using `https://github.com/fvcproductions/SOMEREPO`
 
-### Setup
+## Getting Started
 
-- If you want more syntax highlighting, format your code like this:
+These instructions will get you a copy of the project up and running on your local machine.
 
-> update and install this package first
+### Prerequisites
 
-```shell
-$ brew update
-$ brew install fvcproductions
-```
+These are the software you need to run this prototype
 
-> now install npm and bower packages
+`Git`
+`Python`
 
-```shell
-$ npm install
-$ bower install
-```
+### Installing
 
-- For all the possible languages that support syntax highlithing on GitHub (which is basically all of them), refer <a href="https://github.com/github/linguist/blob/master/lib/linguist/languages.yml" target="_blank">here</a>.
+A step by step series of instructions that tell you how to get the prototype running
+
+Downloading the project files into in an Existing Directory
+
+for Linux:
+`$ cd /home/user/my_project`
+
+for Mac:
+`$ cd /Users/user/my_project`
+
+for Windows:
+`$ cd /c/user/my_project`
+
+and type:
+`$ git clone https://github.com/tqx2012/Team15.git`
+
+### Running
+
+Change your current directory into the project directory.
+
+Run `python -m SimpleHTTPServer` (or `python -m http.server` for Python 3) in a terminal in the same directory as your HTML file.
+
+Visit `localhost:8000` and you will see the VR environment loaded up in the browser.
 
 ---
 
@@ -192,3 +209,7 @@ Reach out to me at one of the following places!
 
 - **[MIT license](http://opensource.org/licenses/mit-license.php)**
 - Copyright 2015 © <a href="http://fvcproductions.com" target="_blank">FVCproductions</a>.
+=======
+# team15
+
+

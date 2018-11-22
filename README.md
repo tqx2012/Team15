@@ -9,8 +9,7 @@
 ## How do admin interact with the portal
 
 - Admin can view the portal on a computer with input using mouse and keyboard. Admin has to login to be granted admin priviledges. 
-- Admin can select levels and then using ctrl+alt+i, he will be able to manipulate the environment and edit the objects inside. 
-
+- Admin can select levels and then using ctrl+alt+i, he will be able to manipulate the environment and edit the objects inside simply by manipulating the arrow in the direction of X,Y,Z coordinates. By clicking on each objects, there are also serveral properties appearing in the right panel for admin to manipulate.
 ---
 
 ## License

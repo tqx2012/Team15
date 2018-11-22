@@ -4,7 +4,8 @@
     <meta charset="utf-8">
     <title>Links</title>
     <meta name="description" content="Motion Capture Components – A-Frame">
-    <script src="../../../dist/aframe-master.js"></script>
+    <!--<script src="../../../dist/aframe-master.js"></script>-->
+    <script src="dist/aframe-master.js"></script>
     <script src="js/components/aframe-tooltip-component.js"></script>
     <script src="js/components/camera-position.js"></script>
     <script src="js/components/ground.js"></script>
@@ -19,9 +20,9 @@
         <img id="thumbSunrise" crossOrigin="anonymous" src="https://cdn.aframe.io/link-traversal/thumbs/sunrise.png">
         <img id="thumbMountains" crossOrigin="anonymous" src="https://cdn.aframe.io/link-traversal/thumbs/mountains.png">
       </a-assets>
-      <a-link href="road.html" position="-3.5 1.5 -1.0" image="#thumbCity"></a-link>						
-      <a-link href="road1.html" position="0 1.5 -1.0" image="#thumbSunrise"></a-link>
-      <a-link href="road1_crowded.html" position="3.5 1.5 -1.0" image="#thumbMountains"></a-link>
+      <a-link id="level1" href="road.html" position="-3.5 1.5 -1.0" image="#thumbCity"></a-link>						
+      <a-link id="level2" href="road1.html" position="0 1.5 -1.0" image="#thumbSunrise"></a-link>
+      <a-link id="level3" href="road1_crowded.html" position="3.5 1.5 -1.0" image="#thumbMountains"></a-link>
       <a-entity id="sky"
                 geometry="primitive: sphere; radius: 65;"
                 material="shader: flat; color: #47c9ff; side: double"></a-entity>
@@ -51,5 +52,18 @@
 		
 		
     </a-scene>
+    <script src="js/jquery.js"></script>
   </body>
+  <script>
+    var link = localStorage.getItem("link");
+    //alert(link);
+    if (link === null) {
+        //alert("no");
+    } else {
+        //alert("please");
+        var newlink = document.querySelector('a-scene').querySelector('#level1');
+        newlink.setAttribute('href', link);
+        localStorage.removeItem("link");
+    }
+  </script>
 </html>

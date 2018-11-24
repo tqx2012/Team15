@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Links</title>
+    <title>Homepage</title>
     <meta name="description" content="Motion Capture Components – A-Frame">
     <script src="../../../dist/aframe-master.js"></script>
     <script src="js/components/aframe-tooltip-component.js"></script>
@@ -15,12 +15,9 @@
     <a-scene raycaster="far: 100; objects: [link];" cursor="rayOrigin: mouse" camera-position>
       <a-assets>
         <img id="arena" crossOrigin="anonymous" src="https://cdn.aframe.io/link-traversal/aframeArena.png">
-        <img id="thumbCity" crossOrigin="anonymous" src="https://cdn.aframe.io/link-traversal/thumbs/city.png">
-        <img id="thumbSunrise" crossOrigin="anonymous" src="https://cdn.aframe.io/link-traversal/thumbs/sunrise.png">
-        <img id="thumbMountains" crossOrigin="anonymous" src="https://cdn.aframe.io/link-traversal/thumbs/mountains.png">
       </a-assets>
-      <a-link href="login.html" position="-3.5 1.5 -1.0" image="#thumbCity"></a-link>						
-      <a-link href="daynight.html" position="0 1.5 -1.0" image="#thumbSunrise"></a-link>
+      <a-link href="login.html" title="Login Here" position="-2.5 1.5 -1.0" image="img/login.png"></a-link>						
+      <a-link href="daynight.html" title="Play VR" position="1.5 1.5 -1.0" image="img/playvr.png"></a-link>
       <a-entity id="sky"
                 geometry="primitive: sphere; radius: 65;"
                 material="shader: flat; color: #47c9ff; side: double"></a-entity>
@@ -33,18 +30,18 @@
 	          <a-entity
           id="leaderboard"
           mixin="slice font"
-          slice9="color: #111; height: 5.5; width: 12.5; padding: 0.3"
+          slice9="color: black; height: 5.5; width: 12.5; padding: 0.3"
           leaderboard
           look-at="0 0 0"
           position="-12 10 -9">
-          <a-entity text="baseline: bottom; color: black; width: 12; wrapCount: 35; zOffset: 0.1; value: 1. sigmund                                             100000\n2. junhui                                                    80000\n3. alan                                                       60000\n4.\n5." position="0.2 -1.8 0"></a-entity>
+          <a-entity text="baseline: bottom; color: white; width: 12; wrapCount: 35; zOffset: 0.1; value: 1. sigmund                                             100000\n2. junhui                                                    80000\n3. alan                                                       60000\n4.\n5." position="0.2 -1.8 0"></a-entity>
           <a-entity mixin="font" text="align: center; value: LEADERBOARD; width: 12" position="0 2 0.01"></a-entity>
         </a-entity>
 		<a-entity
           id="instructionText"
           mixin="slice font"
-          slice9="color: #111; height: 5.5; width: 12.5; padding: 0.3"
-          text="color: black; width: 12; wrapCount: 35; zOffset: 0.1; value: RIDESAFE.\n\nYOUR CHALLENGE\nSURVIVE 10 MINS\nGAIN POINTS BY RIDING SAFE\nPOINTS WILL BE DEDUCTED DUE TO COLLISION\n" position="12 10 -9" look-at="0 0 0">
+          slice9="color: black; height: 5.5; width: 12.5; padding: 0.3"
+          text="color: white; width: 12; wrapCount: 35; zOffset: 0.1; value: RIDESAFE.\n\nYOUR CHALLENGE\nSURVIVE 10 MINS\nGAIN POINTS BY RIDING SAFE\nPOINTS WILL BE DEDUCTED DUE TO COLLISION\n" position="12 10 -9" look-at="0 0 0">
            
           </a-entity>
 		

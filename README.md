@@ -28,7 +28,7 @@ These are the software you need to run this prototype
 `Git`
 `Python`
 
-### Installation
+### How to install
 
 A step by step series of instructions that tell you how to get the prototype running
 

@@ -1,10 +1,8 @@
 # team15
 
-<a href="http://fvcproductions.com"><img src="https://avatars1.githubusercontent.com/u/4284691?v=3&s=200" title="FVCproductions" alt="FVCproductions"></a>
 
-<!-- [![FVCproductions](https://avatars1.githubusercontent.com/u/4284691?v=3&s=200)](http://fvcproductions.com) -->
+![FVCproductions](https://raw.githubusercontent.com/tqx2012/Team15/master/img/Logo.png)
 
-***INSERT GRAPHIC HERE (include hyperlink in image)***
 
 # RideSafe
 

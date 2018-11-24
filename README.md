@@ -47,10 +47,9 @@ and type:
 `$ git clone https://github.com/tqx2012/Team15.git`
 
 ### Running
+Using our link hosted on Github pages: https://tqx2012.github.io/Team15/  ( No installation needed)
 
 Change your current directory into the project directory.
-
-Using our link hosted on Github pages: https://tqx2012.github.io/Team15/
 
 Run `python -m SimpleHTTPServer` (or `python -m http.server` for Python 3) in a terminal in the same directory as your HTML file.
 

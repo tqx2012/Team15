@@ -63,6 +63,7 @@ Google Cardboard provides the best experience for RideSafe
 
 1. When selecting levels, players can stare at the levels to enter the respective levels to play in 
 2. Within the game itself, there will be yellow cylinders as checkpoints. Players can stare at the cylinders to proceed. Read the messages inside the game and follow instructions to proceed.
+3. When players are done with the level, remove phone from Google cardboard and use back button to exit or simply back button on browser
 
 
 ## How does an admin interact with the portal

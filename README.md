@@ -64,8 +64,8 @@ Visit `localhost:8000` and you will see the VR environment loaded up in the brow
 
 
 ## How does an admin interact with the portal
-Log in
+Log in  
 ![](login.gif)
 
-Modify!
+Modify!  
 ![](modify.gif)

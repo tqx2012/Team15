@@ -50,7 +50,7 @@ and type:
 
 Change your current directory into the project directory.
 
-Using our link hosted on Github pages: https://tqx2012.github.io/Team15/
+Using our link hosted on Github pages: https://tqx2012.github.io/Team15/  ( No installation needed)
 
 Run `python -m SimpleHTTPServer` (or `python -m http.server` for Python 3) in a terminal in the same directory as your HTML file.
 

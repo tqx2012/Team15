@@ -61,6 +61,7 @@ Visit `localhost:8000` and you will see the VR environment loaded up in the brow
 
 - Firstly when selecting levels, players can stare at the levels to enter the respective levels to play in 
 - Secondly, within the game itself, there will be yellow cylinders as checkpoints. Players can stare at the cylinders to proceed. Read the messages inside the game and follow instructions to proceed.
+- Lastly, when you are done with the level, remove phone from Google cardboard and use back button to exit or simply back button on browser if you are not in VR.
 
 
 ## How does an admin interact with the portal

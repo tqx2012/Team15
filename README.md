@@ -52,6 +52,8 @@ and type:
 
 Change your current directory into the project directory.
 
+Using our link hosted on Github pages: https://tqx2012.github.io/Team15/
+
 Run `python -m SimpleHTTPServer` (or `python -m http.server` for Python 3) in a terminal in the same directory as your HTML file.
 
 Visit `localhost:8000` and you will see the VR environment loaded up in the browser.

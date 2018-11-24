@@ -8,7 +8,7 @@
 
 # RideSafe
 
-RideSafe is a VR application that simulates safe cycling and usage of PMDs in Singapore. By going through the various simulations available in the RideSafe VR application, cyclists and PMD usersshouldbe able tounderstand the ways of safe cycling. Similarly, pedestrians and vehicle driverscan also use  RideSafe to empathize from the cyclists and PMD users’ point of view. Ultimately, the intended outcome is for the average number of accidents, that can be prevented with simple safety measures, to be  reduced.  It  is  to  be  noted,  however,  that  RideSafe  does  not  teach  an  individual  how  to  operate  a bicycle or PMD, nor pre-cycling or pre-riding safety measures such as strapping on a helmet and check of brakes et cetera.
+RideSafe is a VR application that simulates safe cycling and usage of PMDs in Singapore. By going through the various simulations available in the RideSafe VR application, cyclists and PMD usersshouldbe able tounderstand the ways of safe cycling. Similarly, pedestrians and vehicle driverscan also use  RideSafe to empathize from the cyclists and PMD usersâ€™ point of view. Ultimately, the intended outcome is for the average number of accidents, that can be prevented with simple safety measures, to be  reduced.  It  is  to  be  noted,  however,  that  RideSafe  does  not  teach  an  individual  how  to  operate  a bicycle or PMD, nor pre-cycling or pre-riding safety measures such as strapping on a helmet and check of brakes et cetera.
 
 ## Installation
 
@@ -52,6 +52,8 @@ and type:
 
 Change your current directory into the project directory.
 
+Using our link hosted on Github pages: https://tqx2012.github.io/Team15/
+
 Run `python -m SimpleHTTPServer` (or `python -m http.server` for Python 3) in a terminal in the same directory as your HTML file.
 
 Visit `localhost:8000` and you will see the VR environment loaded up in the browser.
@@ -63,8 +65,9 @@ Visit `localhost:8000` and you will see the VR environment loaded up in the brow
 - Secondly, within the game itself, there will be yellow cylinders as checkpoints. Players can stare at the cylinders to proceed. Read the messages inside the game and follow instructions to proceed.
 
 
-## How do admin interact with the portal
+## How does an admin interact with the portal
+Log in  
+![](login.gif)
 
-- Admin can view the portal on a computer with input using mouse and keyboard. Admin has to login to be granted admin priviledges. 
-- Admin can select levels and then using ctrl+alt+i, he will be able to manipulate the environment and edit the objects inside simply by manipulating the arrow in the direction of X,Y,Z coordinates. By clicking on each objects, there are also serveral properties appearing in the right panel for admin to manipulate.
-
+Modify!  
+![](modify.gif)

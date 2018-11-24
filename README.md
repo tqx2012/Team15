@@ -9,7 +9,9 @@
 RideSafe is a VR application that simulates safe cycling and usage of PMDs in Singapore. By going through the various simulations available in the RideSafe VR application, cyclists and PMD usersshouldbe able tounderstand the ways of safe cycling. Similarly, pedestrians and vehicle driverscan also use  RideSafe to empathize from the cyclists and PMD usersâ€™ point of view. Ultimately, the intended outcome is for the average number of accidents, that can be prevented with simple safety measures, to be  reduced.  It  is  to  be  noted,  however,  that  RideSafe  does  not  teach  an  individual  how  to  operate  a bicycle or PMD, nor pre-cycling or pre-riding safety measures such as strapping on a helmet and check of brakes et cetera.
 
 ## Youtube video link:
-[![Application video](https://img.youtube.com/vi//0.jpg)](https://www.youtube.com/watch?v=)
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=Y3_RT8KT_IA
+" target="_blank"><img src="http://img.youtube.com/vi/Y3_RT8KT_IA/0.jpg" 
+alt="Team15" width="240" height="180" border="10" /></a>
 
 ## Installation
 

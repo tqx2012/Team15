@@ -9,11 +9,32 @@
         <script src="//cdn.rawgit.com/donmccurdy/aframe-extras/v4.2.0/dist/aframe-extras.min.js"></script>
         <script src="aframe-extras-master/dist/aframe.min.js"></script>
         <script src="../bundle.js"></script>
+                <script>
+
+
+            AFRAME.registerComponent ('collider-check', {
+                dependencies: ['raycaster'],
+
+                init: function () {
+                    var sceneEl = document.querySelector('a-scene');
+                    var scoreBoard = document.querySelector('#score');
+                    
+                    sceneEl.addEventListener('raycaster-intersected', function () {
+
+                        console.log('Player hit something!');
+                        scoreBoard.getAttribute('text').value--;
+                        scoreBoard.setAttribute('text', 'value', scoreBoard.getAttribute('text').value);
+
+                    });
+                }
+            });
+        </script>
 
 
     </head>
 
-    <a-scene inspector="url:https://aframe.io/releases/0.3.0/aframe-inspector.min.js" background="color:#ECECEC" class="fullscreen" keyboard-shortcuts="" screenshot="" vr-mode-ui="">
+    <a-scene inspector="url:https://aframe.io/releases/0.3.0/aframe-inspector.min.js" background="color:#ECECEC" class="fullscreen" 
+             keyboard-shortcuts="" screenshot="" vr-mode-ui="" collider-check>
         <a-assets> 
             <a-mixin id="checkpoint"></a-mixin>
             <a-mixin id="checkpoint-hovered" color="#6CEEB5"></a-mixin>
@@ -51,15 +72,21 @@
         </a-assets>
 
         <!-- Player -->
-        <a-entity position="-7.5 0 25" id="rig" movement-controls="controls: checkpoint" checkpoint-controls="mode: animate">
+        <a-entity position="-7.5 0 25" id="rig" movement-controls="controls: checkpoint" checkpoint-controls="mode: animate ">
             <a-entity camera
                       position="0 1.6 0"
                       look-controls="pointerLockEnabled: true">
+                <a-sphere raycaster="objects: .collidable; far: 0.4" geometry="radius:0.5"></a-sphere>
+                <a-entity raycaster="objects: .collidable; far: 0.4" rotation="0 90 0"></a-entity>
+                <a-entity raycaster="objects: .collidable; far: 0.4" rotation="0 270 0"></a-entity>
+
                 <a-entity cursor
                           position="0 0 -1"
                           geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03;"
                           material="color: #CCC; shader: flat;"></a-entity>
+                <a-entity id="score" text="value:100000" position="1.5 0.75 -1"></a-entity>
             </a-entity>
+
         </a-entity>
 
         <!-- Checkpoints -->

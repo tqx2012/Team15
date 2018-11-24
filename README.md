@@ -10,12 +10,12 @@ RideSafe is a VR application that simulates safe cycling and usage of PMDs in Si
 
 ## Installation
 
-- All the `code` required to get started
-- Images, and models that are required for the application
+- Downloading all the `code` required to get started
+- Downloading images,texture, and models files that are required for the application
 
 ### Clone
 
-- Clone this repo to your local machine using `https://github.com/fvcproductions/SOMEREPO`
+- Clone this repo to your local machine using `https://github.com/tqx2012/Team15.git`
 
 ## Getting Started
 

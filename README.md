@@ -1,4 +1,4 @@
-# team15
+# Team15
 
 
 ![FVCproductions](https://raw.githubusercontent.com/tqx2012/Team15/master/img/Logo.png)
@@ -11,7 +11,7 @@ RideSafe is a VR application that simulates safe cycling and usage of PMDs in Si
 ## Installation
 
 - All the `code` required to get started
-- Images of what it should look like
+- Images, and models that are required for the application
 
 ### Clone
 
@@ -28,7 +28,7 @@ These are the software you need to run this prototype
 `Git`
 `Python`
 
-### Installing
+### Installation
 
 A step by step series of instructions that tell you how to get the prototype running
 
@@ -46,21 +46,23 @@ for Windows:
 and type:
 `$ git clone https://github.com/tqx2012/Team15.git`
 
-### Running
-Using our link hosted on Github pages: https://tqx2012.github.io/Team15/  ( No installation needed)
+### How to Run
 
 Change your current directory into the project directory.
+
+Using our link hosted on Github pages: https://tqx2012.github.io/Team15/
 
 Run `python -m SimpleHTTPServer` (or `python -m http.server` for Python 3) in a terminal in the same directory as your HTML file.
 
 Visit `localhost:8000` and you will see the VR environment loaded up in the browser.
 
+Google Cardboard provides the best experience for RideSafe
+
 
 ## How do players interact with VR environment
 
-- Firstly when selecting levels, players can stare at the levels to enter the respective levels to play in 
-- Secondly, within the game itself, there will be yellow cylinders as checkpoints. Players can stare at the cylinders to proceed. Read the messages inside the game and follow instructions to proceed.
-- Lastly, when you are done with the level, remove phone from Google cardboard and use back button to exit or simply back button on browser if you are not in VR.
+1. When selecting levels, players can stare at the levels to enter the respective levels to play in 
+2. Within the game itself, there will be yellow cylinders as checkpoints. Players can stare at the cylinders to proceed. Read the messages inside the game and follow instructions to proceed.
 
 
 ## How does an admin interact with the portal

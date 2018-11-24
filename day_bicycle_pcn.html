@@ -10,6 +10,24 @@
 	<script src="//cdn.rawgit.com/donmccurdy/aframe-extras/v4.2.0/dist/aframe-extras.min.js"></script>
 	<script src="aframe-extras-master/dist/aframe.min.js"></script>
 	<script src="aframe-extras-master-v0.3.0/dist/aframe.min.js"></script>
+
+	<script>
+		AFRAME.registerComponent('collider-check', {
+			dependencies: ['raycaster'],
+
+			init: function () {
+				var sceneEl = document.querySelector('a-scene');
+				var scoreBoard = document.querySelector('#score');
+				sceneEl.addEventListener('raycaster-intersected', function () {
+
+					console.log('Player hit something!');
+					scoreBoard.getAttribute('text').value--;
+
+					scoreBoard.setAttribute('text', 'value', scoreBoard.getAttribute('text').value)
+				});
+			}
+		});
+	</script>
 </head>
 
 <a-scene inspector="url:https://aframe.io/releases/0.3.0/aframe-inspector.min.js" background="color:#ECECEC" class="fullscreen" keyboard-shortcuts="" screenshot="" vr-mode-ui="">
@@ -71,7 +89,8 @@
                               
 				</a-entity>
 				<a-entity ply-model="src:#bicycle" position="0 -2.5  -0.5" scale="0.1 0.1 0.1" rotation="-90 90 0"></a-entity>
-            </a-entity>
+			</a-entity>
+			<a-entity id="score" text="value:100000" position="3.2 0.75 -1"></a-entity>
         </a-entity>
 
 	<!-- Checkpoints -->

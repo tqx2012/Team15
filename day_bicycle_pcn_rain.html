@@ -10,9 +10,11 @@
 	<script src="//cdn.rawgit.com/donmccurdy/aframe-extras/v4.2.0/dist/aframe-extras.min.js"></script>
 	<script src="aframe-extras-master/dist/aframe.min.js"></script>
 	<script src="aframe-extras-master-v0.3.0/dist/aframe.min.js"></script>
+	<script src="https://rawgit.com/takahirox/aframe-rain/master/build/aframe-rain.min.js"></script>
+
 </head>
 
-<a-scene inspector="url:https://aframe.io/releases/0.3.0/aframe-inspector.min.js" background="color:#ECECEC" class="fullscreen" keyboard-shortcuts="" screenshot="" vr-mode-ui="">
+<a-scene inspector="url:https://aframe.io/releases/0.3.0/aframe-inspector.min.js" background="color:#ECECEC" class="fullscreen" keyboard-shortcuts="" screenshot="" vr-mode-ui="" rain>
 	<a-assets>
 		<a-mixin id="checkpoint"></a-mixin>
 		<a-mixin id="checkpoint-hovered" color="#6CEEB5"></a-mixin>
@@ -82,7 +84,7 @@
 		<a-cylinder checkpoint="" radius="1" height="5" position="5.5 0 -30" color="#E6FF00" material="color:#E6FF00;opacity:0.5;transparent:true" geometry="primitive:cylinder;radius:1;height:5"></a-cylinder>
     </a-entity>
 
-	<a-sky src="img\SouthernSky.jpg" material="" geometry="" scale="" position=""></a-sky>
+	<a-sky src="img\background.jpg" material="" geometry="" scale="" position=""></a-sky>
 	<!-- PCN left grass -->
 	<a-plane src="img\textures\env_grass2e_texture0.png" repeat="3 30" position="3 0 -4" rotation="-90 0 0" width="30"
 	 height="80" shadow="" material="" geometry=""></a-plane>
@@ -122,7 +124,7 @@
 	<a-entity ply-model="src:#tree1" position="8 0 -5" scale="0.1 0.1 0.1" rotation="-90 0 0"></a-entity>
 	<a-entity ply-model="src:#tree1" position="8 0 0" scale="0.1 0.1 0.1" rotation="-90 0 0"></a-entity>
 	<a-entity ply-model="src:#tree1" position="8 0 5" scale="0.1 0.1 0.1" rotation="-90 0 0"></a-entity>
-	<a-entity ply-model="src:#tree1" position="8 0 10" scale="0.1 0.1 0.1" rotation="-90 0 0"></a-entity>
+	<a-entity ply-model="src:#tree1" position="8 0.65 10" scale="0.1 0.1 0.1" rotation="180 90 0"></a-entity>
 	<a-entity ply-model="src:#tree1" position="8 0 15" scale="0.1 0.1 0.1" rotation="-90 0 0"></a-entity>
 	<a-entity ply-model="src:#tree1" position="8 0 20" scale="0.1 0.1 0.1" rotation="-90 0 0"></a-entity>
 	<a-entity ply-model="src:#tree1" position="8 0 25" scale="0.1 0.1 0.1" rotation="-90 0 0"></a-entity>
@@ -133,13 +135,9 @@
 	<a-entity ply-model="src:#cab1" position="-4.43 0 -21.06" scale="0.1 0.1 0.1" rotation="-90 0 0">
 		<a-animation attribute="position" from="-4.43 0 -21.06" to="-4.43 0 -40.06" dur="2000" repeat="indefinite"></a-animation>
 	</a-entity>
-	<a-entity ply-model="src:#wagon4" position="11 0 18" scale="0.1 0.1 0.1" rotation="-90 0 0">
-	</a-entity>
+	<a-entity ply-model="src:#wagon4" position="11 0 18" scale="0.1 0.1 0.1" rotation="-90 0 0"></a-entity>
 	<a-entity ply-model="src:#bus" position="-5.47 0 0.54" scale="0.1 0.1 0.1" rotation="-90 0 0">
 		<a-animation attribute="position" from="-5.47 0 0.54" to="-4.43 0 -40.06" dur="8000" repeat="indefinite"></a-animation>
-	</a-entity>
-	<a-entity ply-model="src:#car5" position="-3 0 -8" scale="0.1 0.1 0.1" rotation="-90 210 0">
-		<a-animation attribute="position" from="-3 0 -8" to="3 0 -8" dur="2000" repeat="indefinite"></a-animation>
 	</a-entity>
 	<a-entity ply-model="src:#busstop" position="-7.5 0 2.95" scale="0.1 0.1 0.1" rotation="-90 90 0"></a-entity>
 
@@ -153,7 +151,7 @@
 	<a-entity ply-model="src:#coffee" position="13 0 32" scale="0.1 0.1 0.1" rotation="-90 180 0"></a-entity>
 
 	<!-- Characters on right lane of PCN-->
-	<a-entity ply-model="src:#chr_headphones" position="6.5 0 10" scale="0.1 0.1 0.1" rotation="-90 180 0"></a-entity>
+	<!-- <a-entity ply-model="src:#chr_headphones" position="6.5 0 10" scale="0.1 0.1 0.1" rotation="-90 180 0"></a-entity> -->
 	<a-entity ply-model="src:#chr_lady1" position="6.5 0 17" scale="0.1 0.1 0.1" rotation="-90 180 0"></a-entity>
 
 	<!-- Characters on left lane of PCN-->
@@ -199,16 +197,18 @@
 	<a-entity ply-model="src:#sidewalk" position="6.5 0 24.6" scale="0.1 0.1 0.1" rotation="-90 90 0"></a-entity>
 	<a-entity ply-model="src:#sidewalk" position="6.5 0 31" scale="0.1 0.1 0.1" rotation="-90 90 0"></a-entity>
 
+	<!-- PCN Right-->
+	<a-entity ply-model="src:#rubbish" position="5 0.2 -9" scale="0.1 0.1 0.1" rotation="-90 90 0"></a-entity>
+
 	<!-- Walkway to park -->
 	<a-entity ply-model="src:#sidewalk" position="10.5 0 21.73" scale="0.1 0.1 0.1" rotation="-90 0 0"></a-entity>
 	<!-- Walkway to park -->
 	<a-entity ply-model="src:#sidewalk" position="10.5 0 6.8" scale="0.1 0.1 0.1" rotation="-90 0 0"></a-entity>
 
 	<!-- Text Box -->
-	<a-entity position="6.5 2 10" geometry="primitive:plane;height:0.5;width:2" material="color:red" text="width:2;value:Pedestrians on headphones that are unable to hear cyclists approaching and unknowingly walk directly into a moving bicycle
-	;zOffset:0"> </a-entity>
-	<a-entity position="3 2 -8" geometry="primitive:plane;height:0.5;width:2" material="color:red" text="width:2;value:Watch out for cars steering inside PCN;zOffset:0"> </a-entity>
-	<a-entity position="6.50 2 -19" geometry="primitive:plane;height:0.5;width:2" material="color:red" text="width:2;value:Watch out for pedestrains;zOffset:0"> </a-entity>
+	<a-entity position="6.5 2 10" geometry="primitive:plane;height:0.5;width:2" material="color:red" text="width:2;value:Beware of fallen trees during rain;zOffset:0"> </a-entity>
+	<a-entity position="5 2 -8" geometry="primitive:plane;height:0.5;width:2" material="color:red" text="width:2;value:Watch out for debris during rain;zOffset:0"> </a-entity>
+	<a-entity position="6.50 2 -18" geometry="primitive:plane;height:0.5;width:2" material="color:red" text="width:2;value:Watch out for pedestrains;zOffset:0"> </a-entity>
 
 </a-scene>
 
